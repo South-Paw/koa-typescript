@@ -1,0 +1,64 @@
+{
+  "name": "@south-paw/koa-typescript",
+  "version": "0.0.1",
+  "description": "Simple boilerplate for a Koa server with Typescript, ESLint, Prettier and Jest.",
+  "keywords": [],
+  "homepage": "https://github.com/South-Paw/koa-typescript",
+  "bugs": "https://github.com/South-Paw/koa-typescript/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Alex Gabites",
+    "email": "hello@southpaw.co.nz",
+    "url": "http://southpaw.co.nz/"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/South-Paw/koa-typescript.git"
+  },
+  "scripts": {
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"yarn ts:watch\" \"yarn start:watch\"",
+    "watch:debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\"  \"yarn ts:watch\" \"yarn start:debug\"",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet",
+    "test": "jest --forceExit --coverage --verbose",
+    "test:watch": "yarn test --watchAll",
+    "build": "yarn clean && yarn ts && yarn lint",
+    "start": "node dist/index.js",
+    "start:watch": "nodemon dist/index.js",
+    "start:debug": "nodemon --inspect dist/index.js",
+    "ts": "tsc",
+    "ts:watch": "tsc -w",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "dotenv": "^8.1.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/koa": "^2.0.50",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.0.42",
+    "@types/koa__cors": "^2.2.3",
+    "@types/node": "^12.7.12",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "concurrently": "^5.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-typescript": "^5.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.3",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.6.4"
+  },
+  "private": true
+}
