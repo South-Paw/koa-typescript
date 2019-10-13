@@ -1,9 +1,9 @@
 import Router from 'koa-router';
 
-import { register as healthRoutes } from './routes/health';
+import HealthRoutes from './routes/health';
 
-const apiRouter = new Router({ prefix: '/api' });
+const router = new Router();
 
-healthRoutes(apiRouter);
+HealthRoutes.register(router);
 
-export { apiRouter };
+export { router };

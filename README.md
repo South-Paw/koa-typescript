@@ -6,9 +6,9 @@
 
 Unlike some of the other Koa boilerplates out there, this one is intended to be simple, minimalistic and reasonably unopinionated.
 
-* Typescript, ESLint, Prettier and Jest are ready to roll
-* Config has `.env` file support
-* Simple `/api/health` route implemented
+- Typescript, ESLint, Prettier and Jest are ready to roll
+- Config has `.env` file support
+- Simple `/health` route implemented
 
 You don't need to keep anything as you find it and hopefully it will save you a little time when you need a quick boilerplate for that next Koa project.
 
