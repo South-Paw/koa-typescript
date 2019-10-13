@@ -31,7 +31,7 @@ yarn watch
 # Runs all watch tasks with --inspect flag
 yarn watch:debug
 
-#	Runs ESLint on project files
+# Runs ESLint on project files
 yarn lint
 
 # Runs tests using Jest
