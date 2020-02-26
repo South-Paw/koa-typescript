@@ -1,8 +1,7 @@
+import cors from '@koa/cors';
 import http from 'http';
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
-import cors from '@koa/cors';
-
 import { appConfig, bodyParserConfig, corsConfig } from './config';
 import { router } from './router';
 

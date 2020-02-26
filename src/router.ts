@@ -1,5 +1,4 @@
 import Router from 'koa-router';
-
 import HealthRoutes from './routes/health';
 
 const router = new Router();
